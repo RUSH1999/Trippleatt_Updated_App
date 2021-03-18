@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=D3:6E:FC:D8:B9:94:D5:3A:77:D3:95:F9:73:BD:3F:83:E6:47:97:BE%3Bcom.tripplleat.trippleattcustomer
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.tripplleat.trippleattcustomer
+
+    SHA-1 certificate fingerprint:
+    D3:6E:FC:D8:B9:94:D5:3A:77:D3:95:F9:73:BD:3F:83:E6:47:97:BE
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAO-TjeAKLuZC8Ijn9K8vs8otlfue5tpFw</string>
+</resources>

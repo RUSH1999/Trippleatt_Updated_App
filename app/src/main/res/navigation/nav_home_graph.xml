@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_initialAddProductfragment"
+            app:destination="@id/initialAddProductfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myCartFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.drawers_menu.MyCartFragment"
+        android:label="fragment_my_cart"
+        tools:layout="@layout/fragment_my_cart" />
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.drawers_menu.MyProfileFragment"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/mySaleFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.drawers_menu.MySaleFragment"
+        android:label="fragment_my_sale"
+        tools:layout="@layout/fragment_my_sale" />
+    <fragment
+        android:id="@+id/mySettingFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.drawers_menu.MySettingFragment"
+        android:label="fragment_my_setting"
+        tools:layout="@layout/fragment_my_setting" />
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.packed_product.AddProductFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" >
+        <action
+            android:id="@+id/action_addProductFragment_to_addProductLooseFragment"
+            app:destination="@id/addProductLooseFragment" />
+        <action
+            android:id="@+id/action_addProductFragment_to_barcodeReaderFragment"
+            app:destination="@id/barcodeReaderFragment" />
+        <action
+            android:id="@+id/action_addProductFragment_to_barCodeReaderFragmentForAdapter"
+            app:destination="@id/barCodeReaderFragmentForAdapter" />
+        <action
+            android:id="@+id/action_addProductFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductLooseFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.loose_product.AddProductLooseFragment"
+        android:label="AddProductLooseFragment" >
+        <action
+            android:id="@+id/action_addProductLooseFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_addProductLooseFragment_to_barcodeReaderFragment"
+            app:destination="@id/barcodeReaderFragment" />
+        <action
+            android:id="@+id/action_addProductLooseFragment_to_barCodeReaderFragmentForAdapter"
+            app:destination="@id/barCodeReaderFragmentForAdapter" />
+        <action
+            android:id="@+id/action_addProductLooseFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/barcodeReaderFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.barcode.BarcodeReaderFragment"
+        android:label="fragment_barcode_reader"
+        tools:layout="@layout/fragment_barcode_reader" >
+        <action
+            android:id="@+id/action_barcodeReaderFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_barcodeReaderFragment_to_addProductLooseFragment"
+            app:destination="@id/addProductLooseFragment" />
+        <action
+            android:id="@+id/action_barcodeReaderFragment_to_initialAddProductfragment"
+            app:destination="@id/initialAddProductfragment" />
+        <action
+            android:id="@+id/action_barcodeReaderFragment_to_addVariantToProductDialog"
+            app:destination="@id/addVariantToProductDialog" />
+        <action
+            android:id="@+id/action_barcodeReaderFragment_to_addVariantToProductDialogLoose"
+            app:destination="@id/addVariantToProductDialogLoose" />
+    </fragment>
+    <fragment
+        android:id="@+id/barCodeReaderFragmentForAdapter"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.barcode.BarCodeReaderFragmentForAdapter"
+        android:label="BarCodeReaderFragmentForAdapter" >
+        <action
+            android:id="@+id/action_barCodeReaderFragmentForAdapter_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_barCodeReaderFragmentForAdapter_to_addProductLooseFragment"
+            app:destination="@id/addProductLooseFragment" />
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/initialAddProductfragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.InitialAddProductfragment"
+        android:label="InitialAddProductfragment" >
+        <action
+            android:id="@+id/action_initialAddProductfragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_initialAddProductfragment_to_barcodeReaderFragment"
+            app:destination="@id/barcodeReaderFragment" />
+        <action
+            android:id="@+id/action_initialAddProductfragment_to_addVariantToProductDialog"
+            app:destination="@id/addVariantToProductDialog" />
+        <action
+            android:id="@+id/action_initialAddProductfragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addVariantToProductDialog"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.packed_product.AddVariantToProductDialog"
+        android:label="layout_dialog_add_product_variant"
+        tools:layout="@layout/layout_dialog_add_product_variant" >
+        <action
+            android:id="@+id/action_addVariantToProductDialog_to_initialAddProductfragment"
+            app:destination="@id/initialAddProductfragment" />
+        <action
+            android:id="@+id/action_addVariantToProductDialog_to_barcodeReaderFragment"
+            app:destination="@id/barcodeReaderFragment" />
+        <action
+            android:id="@+id/action_addVariantToProductDialog_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_addVariantToProductDialog_to_addVariantToProductDialogLoose"
+            app:destination="@id/addVariantToProductDialogLoose" />
+    </fragment>
+    <fragment
+        android:id="@+id/addVariantToProductDialogLoose"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.loose_product.AddVariantToProductDialogLoose"
+        android:label="layout_dialog_add_product_variant_loose"
+        tools:layout="@layout/layout_dialog_add_product_variant_loose" >
+        <action
+            android:id="@+id/action_addVariantToProductDialogLoose_to_barcodeReaderFragment"
+            app:destination="@id/barcodeReaderFragment" />
+        <action
+            android:id="@+id/action_addVariantToProductDialogLoose_to_initialAddProductfragment"
+            app:destination="@id/initialAddProductfragment" />
+        <action
+            android:id="@+id/action_addVariantToProductDialogLoose_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_addVariantToProductDialogLoose_to_addVariantToProductDialog"
+            app:destination="@id/addVariantToProductDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductDialog"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.packed_product.AddProductDialog"
+        android:label="AddProductDialog" >
+        <action
+            android:id="@+id/action_addProductDialog_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/addProductDialogloose"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.seller.loose_product.AddProductDialogloose"
+        android:label="AddProductDialogloose" >
+        <action
+            android:id="@+id/action_addProductDialogloose_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </dialog>
+</navigation>

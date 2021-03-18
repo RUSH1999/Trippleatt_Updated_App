@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cycle"
+                    android:tag="Cycle"
+                    android:onClick="@{viewmodel.changeVihicleType}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Cycle" />
+
+                <RadioButton
+                    android:id="@+id/bike"
+                    android:onClick="@{viewmodel.changeVihicleType}"
+                    android:tag="Bike"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Bike" />
+
+                <RadioButton
+                    android:id="@+id/deleveryvan"
+                    android:onClick="@{viewmodel.changeVihicleType}"
+                    android:tag="DeleveryVan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="DeleveryVan" />
+            </RadioGroup>
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Your Driving Licence"
+                    android:textColor="@android:color/black"
+                    android:textSize="21sp"
+                    />
+                <TextView
+                    android:id="@+id/upload"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload"
+                    android:background="@drawable/upload_button"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle Registration Number"
+                    android:textColor="@android:color/black"
+                    android:textSize="21sp"
+                    />
+                <EditText
+                    android:text="@={viewmodel.vehicleRegisNumber}"
+                    android:maxLines="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_design"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle Company Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="21sp"
+                    />
+                <EditText
+                    android:text="@={viewmodel.vehicleCompanyName}"
+                    android:maxLines="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_design"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle model Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="21sp"
+                    />
+                <EditText
+                    android:text="@={viewmodel.vehicleModelNumber}"
+                    android:maxLines="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_design"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maximum Load Capacity in KG"
+                    android:textColor="@android:color/black"
+                    android:textSize="21sp"
+                    />
+                <EditText
+                    android:text="@={viewmodel.vehicleLoadCap}"
+                    android:maxLines="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_design"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Multiple Delivery at a time"
+                    android:textColor="@android:color/black"
+                    android:textSize="21sp"
+                    />
+                <LinearLayout
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:id="@+id/sayyes"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text="Yes"
+                        android:textAlignment="center"
+                        android:background="@drawable/switchprimary"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:id="@+id/sayno"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text="No"
+                        android:textAlignment="center"
+                        android:background="@drawable/switchsecondary"
+                        android:textColor="@android:color/black"/>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <Button
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="@{viewmodel.vehicleInfoRegister}"
+            android:textSize="21sp"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:text="Submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+           android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</layout>

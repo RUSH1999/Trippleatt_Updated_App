@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shoproom"
+        android:background="@android:color/white"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_gradient"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            >
+            <TextView
+                android:layout_marginEnd="45dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="21sp"
+                android:text="Select your business location"
+                android:textColor="@android:color/white"
+                />
+        </androidx.appcompat.widget.Toolbar>
+        <TextView
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="10dp"
+            android:id="@+id/searchadd"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:maxLines="2"
+            android:textColor="@android:color/black"
+            android:textSize="19sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textAlignment="center"
+            />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/searchadd"
+            android:layout_marginTop="15dp"
+            android:layout_above="@id/conf_loc"
+            />
+
+        <Button
+            android:onClick="@{viewmodel.setLocationForBusiness}"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/conf_loc"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Confirm Location"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="21sp"
+            />
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/changemapview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/conf_loc"
+    android:layout_marginBottom="25dp"
+    android:layout_marginStart="25dp"
+    android:src="@drawable/changemapview"
+    android:backgroundTint="@android:color/holo_blue_dark"/>
+
+    </RelativeLayout>
+</layout>

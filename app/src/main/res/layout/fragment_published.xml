@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ui.home.seller.PublishedFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/txtSi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "SI"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000" />
+    <TextView
+        android:id="@+id/txtItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Item Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/txtSi"
+        android:textColor="#000000" />
+    <TextView
+        android:id="@+id/txtCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Category"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/txtItemName"
+        android:textColor="#000000" />
+    <TextView
+        android:id="@+id/txtStocks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Stocks"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/txtCategory"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/txtMrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Mrp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/txtStocks"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Price"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:textColor="#000000" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSi"
+        android:layout_marginTop="20dp"
+        android:id="@+id/publishedRecyclerView"/>
+
+</RelativeLayout>

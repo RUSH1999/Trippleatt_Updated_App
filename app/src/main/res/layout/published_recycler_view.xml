@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtSiPublished"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text= "1"
+        android:textSize="16sp"
+        android:layout_marginRight="10dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/txtItemNamePublished"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text= "Item Name"
+        android:textSize="16sp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/txtSiPublished"
+        android:textColor="#03A9F4" />
+
+    <TextView
+        android:id="@+id/txtCategoryPublished"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text= "Category"
+        android:textSize="16sp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/txtItemNamePublished"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/txtStocksPublished"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text= "Stocks"
+        android:textSize="16sp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/txtCategoryPublished"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/txtMrpPublished"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text= "Mrp"
+        android:textSize="16sp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/txtStocksPublished"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/txtPricePublished"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:text= "Price"
+        android:textSize="16sp"
+        android:layout_toRightOf="@+id/txtMrpPublished"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/txtOptions"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_options"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentRight="true"
+        android:textColor="#000000" />
+
+</RelativeLayout>

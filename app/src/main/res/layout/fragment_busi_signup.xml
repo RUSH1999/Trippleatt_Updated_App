@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
+
+
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <EditText
+                android:layout_marginTop="250dp"
+                android:id="@+id/firstname"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/stroke_otp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:paddingStart="15dp"
+                android:hint="First Name"
+                android:text="@={viewmodel.firstname}"
+                android:paddingEnd="15dp"
+                android:textAlignment="center"
+                />
+            <EditText
+                android:layout_marginTop="20dp"
+                android:id="@+id/lastname"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/stroke_otp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:paddingStart="15dp"
+                android:hint="Last Name"
+                android:text="@={viewmodel.lastname}"
+                android:paddingEnd="15dp"
+                android:textAlignment="center"
+                />
+
+            <Button
+                android:onClick="@{viewmodel.registerBusiness}"
+                android:fontFamily="@font/verdana"
+                android:layout_marginTop="20dp"
+                android:id="@+id/setuploc"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/button_loc"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:maxLines="1"
+                android:text="Continue"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:paddingStart="35dp"
+                android:paddingEnd="15dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

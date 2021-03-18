@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_busi"
+    app:startDestination="@id/busiLoginFragment">
+
+
+    <fragment
+        android:id="@+id/busiLoginFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.auth.business.busiLoginFragment"
+        android:label="busiLoginFragment" />
+    <fragment
+        android:id="@+id/busiOtpVerification"
+        android:name="com.tripplleat.trippleattcustomer.ui.auth.business.busiOtpVerification"
+        android:label="busiOtpVerification" />
+    <fragment
+        android:id="@+id/busimap"
+        android:name="com.tripplleat.trippleattcustomer.ui.auth.business.Busimap"
+        android:label="Busimap" />
+    <fragment
+        android:id="@+id/busiSignupFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.auth.business.busiSignupFragment"
+        android:label="busiSignupFragment" />
+    <fragment
+        android:id="@+id/selectStore"
+        android:name="com.tripplleat.trippleattcustomer.ui.auth.business.selectStore"
+        android:label="selectStore" />
+</navigation>

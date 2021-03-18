@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/packedProductLinearLayout"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btndeleteVariant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Varaint"
+        android:textAllCaps="false"
+        android:layout_gravity="right"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:drawableStart="@drawable/ic_delete"
+        android:textSize="18sp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#E8113F"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/stroke_otp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/etVariantName"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="2"
+                android:background="@drawable/white_background"
+                android:hint="Enter Variant / Size Name"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:paddingLeft="15dp">
+
+                <RadioButton
+                    android:id="@+id/rbPacked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Packed" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:weightSum="3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/stroke_otp"
+        android:orientation="horizontal">
+        <EditText
+            android:background="@drawable/white_background"
+            android:layout_margin="2.5dp"
+            android:id="@+id/etPackedBarCode"
+            android:layout_width="0dp"
+            android:layout_weight="2.4"
+            android:layout_height="60dp"
+            android:hint="Enter the Barcode"
+            android:padding="10dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_barcode"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:id="@+id/txtBarCodeReaderPacked"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etPackedMrp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/stroke_otp"
+        android:hint="Enter the MRP"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etPackedSellingPrice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/stroke_otp"
+        android:hint="Enter the Selling Price"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="2.4"
+            android:text="Upload product Image"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtUploadImageOfProduct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="0.3"
+            android:drawableStart="@drawable/ic_files" />
+
+        <TextView
+            android:id="@+id/txtClickImageOfProduct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="0.3"
+            android:drawableStart="@drawable/ic_camera" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etPackedCurrentStock"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/stroke_otp"
+        android:hint="Enter the Current Stock"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+</LinearLayout>

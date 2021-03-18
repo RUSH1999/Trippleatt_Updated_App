@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/relativeLayoutCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/btncartcontinue"
+    android:id="@+id/cartProductsRecyclerview"/>
+    <Button
+        android:id="@+id/btncartcontinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Continue"/>
+    </RelativeLayout>
+    <include
+        layout="@layout/add_product_bottom_sheet"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

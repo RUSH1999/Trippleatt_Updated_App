@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shoproom"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_gradient"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            >
+            <TextView
+                android:layout_marginEnd="45dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="21sp"
+                android:text="Select your store"
+                android:textColor="@android:color/white"
+                />
+        </androidx.appcompat.widget.Toolbar>
+        <EditText
+            android:text="@={viewmodel.query}"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="10dp"
+            android:id="@+id/search"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/button_design"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:paddingEnd="15dp"
+            android:textAlignment="center"
+            />
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".choose_loc_busi"
+            android:layout_below="@id/search"
+            android:layout_marginTop="10dp"
+            android:layout_above="@id/sometext"/>
+        <TextView
+            android:id="@+id/sometext"
+            android:layout_above="@id/room_shops_list"
+            android:layout_marginTop="10dp"
+            android:paddingEnd="25dp"
+            android:paddingStart="25dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap to Choose your shop"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            />
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:id="@+id/room_shops_list"
+            android:layout_alignParentBottom="true"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/container">
+                <RelativeLayout
+                    android:layout_width="150dp" android:layout_height="150dp"
+                    android:background="@drawable/shopbox"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:onClick="addnewshop">
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="Add a new shop"
+                        android:textAlignment="center"
+                        android:layout_centerInParent="true"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/changemapview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/sometext"
+            android:layout_marginBottom="25dp"
+            android:layout_marginStart="25dp"
+            android:src="@drawable/changemapview"
+            android:backgroundTint="@android:color/holo_blue_dark"/>
+
+    </RelativeLayout>
+</layout>

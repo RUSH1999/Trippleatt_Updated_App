@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Trippleatt</string>
+    <string name="buisness"><u>Business</u></string>
+    <string name="quesmark">\?</string>
+    <string name="otpstring">OTP has been sent to your Mobile phone. Please enter it below</string>
+    <string name="otpstringforexis">OTP has been sent to XXXXXXXXXX. Please enter OTP to verify shop</string>
+    <string name="passwordforexistshop"> Please enter your Password to verify shop</string>
+    <string name="title_activity_choose_loc_busi">Map</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="are_you_a">Are you a </string>
+    <string name="resend_code">Resend Code</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="verify">Verify</string>
+    <string name="permission_request">App requires location permission</string>
+    <string name="title_activity_busi_location">Map</string>
+    <string name="drawerOpen">Drawer Open</string>
+    <string name="drawerClose">Drawer Close</string>
+    <string name="delivertext">Deliver with us</string>
+    <string name="existInCart">Go to Cart</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string-array name="product_list">
+        <item>Choose Category Of the Product</item>
+        <item>Oil</item>
+        <item>Rice</item>
+        <item>Wheat</item>
+        <item>Vegetable</item>
+        <item>Dry fruits</item>
+        <item>Other</item>
+    </string-array>
+</resources>

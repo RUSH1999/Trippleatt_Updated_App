@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/status"
+        android:title="Status"
+        />
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home"/>
+    <item
+        android:id="@+id/myCartFragment"
+        android:title="My Cart"/>
+    <item
+        android:id="@+id/mySaleFragment"
+        android:title="My Sale"/>
+    <item
+        android:id="@+id/myProfileFragment"
+        android:title="My profile"/>
+    <item
+        android:id="@+id/mySettingFragment"
+        android:title="My Setting"/>
+    <item
+        android:id="@+id/join"
+        android:title="Join with Us"/>
+    <item
+        android:id="@+id/job"
+        android:title="Jpb For Jobless"/>
+    <item
+        android:id="@+id/refer"
+        android:title="Refer &amp; Earn"/>
+    <item
+        android:id="@+id/notiicationSetting"
+        android:title="Notification Setting"/>
+    <item
+        android:id="@+id/help"
+        android:title="Help Center"/>
+    <item
+        android:id="@+id/legal"
+        android:title="Legal"/>
+    <item
+        android:id="@+id/busi_logout"
+        android:title="Logout"/>
+    <item
+        android:id="@+id/busi_name"
+        android:title="Name"/>
+
+</menu>

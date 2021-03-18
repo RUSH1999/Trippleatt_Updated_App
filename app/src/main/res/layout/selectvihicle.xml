@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<data>
+    <variable
+        name="viewmodel"
+        type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
+</data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Choose your delevery Vihicle"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/cycle"
+            android:tag="Cycle"
+            android:onClick="@{viewmodel.registerVehicletype}"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="45dp"
+            android:paddingEnd="45dp"
+            android:text="Cycle"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/two_wheeler"
+            android:tag="Bike"
+            android:onClick="@{viewmodel.registerVehicletype}"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="45dp"
+            android:paddingEnd="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bike"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/deleveryvan"
+            android:tag="DeleveryVan"
+            android:onClick="@{viewmodel.registerVehicletype}"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="45dp"
+            android:paddingEnd="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DeleveryVan"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+</layout>

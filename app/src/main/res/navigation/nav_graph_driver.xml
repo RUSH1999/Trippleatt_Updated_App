@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_driver"
+    app:startDestination="@id/driverLogin">
+
+    <fragment
+        android:id="@+id/driverLogin"
+        android:name="com.tripplleat.trippleattcustomer.ui.auth.driver.driverLogin"
+        android:label="fragment_driver_login"
+        tools:layout="@layout/fragment_driver_login" />
+    <fragment
+        android:id="@+id/driverOtpVerification"
+        android:name="com.tripplleat.trippleattcustomer.ui.auth.driver.driverOtpVerification"
+        android:label="driverOtpVerification" />
+    <fragment
+        android:id="@+id/driverSignUp"
+        android:name="com.tripplleat.trippleattcustomer.ui.auth.driver.driverSignUp"
+        android:label="driverSignUp" />
+</navigation>

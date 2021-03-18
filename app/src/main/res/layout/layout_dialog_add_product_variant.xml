@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.seller.packed_product.AddVariantToProductDialog">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.tripplleat.trippleattcustomer.ui.home.viewmodel.HomeViewModal" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollviewAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spinProductList"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/stroke_otp"
+                    android:entries="@array/product_list" />
+
+                <EditText
+                    android:id="@+id/etDialogProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/stroke_otp"
+                    android:hint="Enter the Product Name"
+                    android:padding="10dp"
+                    android:text="@={viewmodel.productName}"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/stroke_otp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <EditText
+                            android:id="@+id/etDialogVariantName"
+                            android:layout_width="0dp"
+                            android:layout_height="65dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/white_background"
+                            android:hint="Enter Variant / Size Name"
+                            android:text="@={viewmodel.packedDialogVariant}"
+                            android:padding="10dp"
+                            android:textSize="20sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupDialog"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:paddingLeft="15dp">
+
+                            <RadioButton
+                                android:id="@+id/rbPackedDialog"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="Packed" />
+
+                            <RadioButton
+                                android:id="@+id/rbLooseDialog"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Loose" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/stroke_otp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/etDialogPackedBarCode"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="2.5dp"
+                        android:layout_weight="2.4"
+                        android:background="@drawable/white_background"
+                        android:hint="Enter the Barcode"
+                        android:text="@={viewmodel.barcode}"
+                        android:padding="10dp"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtDialogBarCodeReader"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:drawableStart="@drawable/ic_barcode"
+                        android:paddingLeft="20dp" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etDialogPackedMrp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/stroke_otp"
+                    android:hint="Enter the MRP"
+                    android:text="@={viewmodel.packedDialogMrp}"
+                    android:padding="10dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etDialogPackedSellingPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/stroke_otp"
+                    android:hint="Enter the Selling Price"
+                    android:text="@={viewmodel.packedDialogSellingPrice}"
+                    android:padding="10dp"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="2.4"
+                        android:text="Upload product Image"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtDialogUploadImageOfProduct"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="0.3"
+                        android:drawableStart="@drawable/ic_files" />
+
+                    <TextView
+                        android:id="@+id/txtDialogClickImageOfProduct"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_weight="0.3"
+                        android:drawableStart="@drawable/ic_camera" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etDialogPackedCurrentStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="90dp"
+                    android:background="@drawable/stroke_otp"
+                    android:hint="Enter the Current Stock"
+                    android:text="@={viewmodel.packedDialogStock}"
+                    android:padding="10dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnDialogSubmitForPublish"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_login"
+            android:text="Submit For Publish"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</layout>

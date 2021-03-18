@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group>
+    <item android:id="@+id/home" android:title="Home"/>
+    <item android:id="@+id/cart" android:title="My Cart"/>
+    <item android:id="@+id/order" android:title="My Order"/>
+    <item android:id="@+id/wallet" android:title="My Wallet"/>
+    <item android:id="@+id/profile" android:title="My Profile"/>
+    <item android:id="@+id/fav" android:title="My Favourite"/>
+</group>
+    <group>
+        <item android:id="@+id/joinus" android:title="Join with us"/>
+        <item android:id="@+id/jobforjobless" android:title="Jobs for jobless"/>
+        <item android:id="@+id/referearn" android:title="Refer and Earn"/>
+    </group>
+    <group>
+        <item android:id="@+id/notisetting" android:title="Notification Setting"/>
+        <item android:id="@+id/help" android:title="Help Centre"/>
+        <item android:id="@+id/legal" android:title="Legal"/>
+        <item android:id="@+id/Logout" android:title="Logout"/>
+        <item android:id="@+id/name1" android:title="Name"/>
+    </group>
+</menu>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_customer.xml"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.customer.fragments.Home_fragment"
+        android:label="Home_fragment" >
+        <action
+            android:id="@+id/action_home_fragment_to_storeProductsFragment"
+            app:destination="@id/storeProductsFragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_pp"
+            app:destination="@id/pp" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeProductsFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.customer.fragments.StoreProductsFragment"
+        android:label="StoreProductsFragment" >
+        <action
+            android:id="@+id/action_storeProductsFragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.customer.fragments.CartFragment"
+        android:label="CartFragment" />
+    <fragment
+        android:id="@+id/pp"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.customer.activity.profileFragment"
+        android:label="CartFragment" />
+</navigation>

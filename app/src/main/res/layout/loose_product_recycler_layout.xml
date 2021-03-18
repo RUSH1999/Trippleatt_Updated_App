@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btndeleteVariant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Varaint"
+        android:textAllCaps="false"
+        android:layout_gravity="right"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:drawableStart="@drawable/ic_delete"
+        android:textSize="18sp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#E8113F"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:background="@drawable/stroke_otp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/etVariantName"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="60dp"
+                android:hint="Enter Variant / Size Name"
+                android:background="@drawable/white_background"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:layout_gravity="center"
+                android:id="@+id/radioGroup">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loose"
+                    android:checked="true"
+                    android:id="@+id/rbLoose"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="KG"
+                android:id="@+id/txtAddProductKg"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:background="@drawable/variant_background"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Liter"
+                android:id="@+id/txtAddProductLiter"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:background="@drawable/stroke_otp"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etVariantUnit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_otp"
+                android:hint="others type unit"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:maxWidth="200dp"
+                android:textAlignment="center"
+                android:layout_marginLeft="15dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:weightSum="3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/stroke_otp"
+        android:orientation="horizontal">
+        <EditText
+            android:background="@drawable/white_background"
+            android:layout_margin="2.5dp"
+            android:id="@+id/etLooseBarCode"
+            android:layout_width="0dp"
+            android:layout_weight="2.4"
+            android:layout_height="60dp"
+            android:hint="Enter the Barcode"
+            android:padding="10dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_barcode"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:id="@+id/txtBarCodeReaderLoose"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etLooseMrp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/stroke_otp"
+        android:hint="Enter the MRP"
+        android:padding="10dp"
+        android:textSize="20sp" />
+    <EditText
+        android:id="@+id/etLooseSellingPrice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/stroke_otp"
+        android:hint="Enter the Selling Price"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="15dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2.4"
+            android:layout_height="wrap_content"
+            android:text="Upload product Image"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_margin="15dp"/>
+
+        <TextView
+            android:id="@+id/txtUploadProductImage"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_files"
+            android:layout_margin="15dp"/>
+
+        <TextView
+            android:id="@+id/txtClickProductImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:drawableStart="@drawable/ic_camera"
+            android:layout_margin="15dp"/>
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etLooseStock"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/stroke_otp"
+        android:hint="Enter the Current Stock"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+</LinearLayout>

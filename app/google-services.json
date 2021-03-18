@@ -1,0 +1,188 @@
+{
+  "project_info": {
+    "project_number": "740718903480",
+    "firebase_url": "https://trippleatt-86fc8.firebaseio.com",
+    "project_id": "trippleatt-86fc8",
+    "storage_bucket": "trippleatt-86fc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740718903480:android:e7fb7ca7870a55ea7bf44d",
+        "android_client_info": {
+          "package_name": "com.example.trippleatt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740718903480-47rlqb3tbudcstudf9sbr3mqkbjtjsod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6DttA8luJQbA_QlLpke1qfhOEQoxKfvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740718903480-47rlqb3tbudcstudf9sbr3mqkbjtjsod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740718903480:android:bfc5a022c7de61fb7bf44d",
+        "android_client_info": {
+          "package_name": "com.trippleatt.androidjava"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740718903480-tjcq4b7maqiusdeqmt3br2ggau4kcb22.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trippleatt.androidjava",
+            "certificate_hash": "179dc7c35c6206c9da275cc1ee17a320576e94fd"
+          }
+        },
+        {
+          "client_id": "740718903480-2ite862fn4tmsrprrv18gvhakmthidph.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trippleatt.androidjava",
+            "certificate_hash": "7bf6a2d3c03563aec34ad2f21f72c32b390cb6c2"
+          }
+        },
+        {
+          "client_id": "740718903480-47rlqb3tbudcstudf9sbr3mqkbjtjsod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6DttA8luJQbA_QlLpke1qfhOEQoxKfvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740718903480-47rlqb3tbudcstudf9sbr3mqkbjtjsod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740718903480:android:ad103fa9ca24bf5c7bf44d",
+        "android_client_info": {
+          "package_name": "com.trippleatt.trippleattcustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740718903480-47rlqb3tbudcstudf9sbr3mqkbjtjsod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6DttA8luJQbA_QlLpke1qfhOEQoxKfvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740718903480-47rlqb3tbudcstudf9sbr3mqkbjtjsod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740718903480:android:52ccd48826b099427bf44d",
+        "android_client_info": {
+          "package_name": "com.tripplleat.trippleattcustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740718903480-42nhp4h7122m1ie69vb3du9o31badme9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tripplleat.trippleattcustomer",
+            "certificate_hash": "d36efcd8b994d53a77d395f973bd3f83e64797be"
+          }
+        },
+        {
+          "client_id": "740718903480-sfouqjrk18at8340dh0t6a0dsq9ie7q4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tripplleat.trippleattcustomer",
+            "certificate_hash": "f3589668ba302d0c0c6899b9343e173568c33f62"
+          }
+        },
+        {
+          "client_id": "740718903480-47rlqb3tbudcstudf9sbr3mqkbjtjsod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6DttA8luJQbA_QlLpke1qfhOEQoxKfvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740718903480-47rlqb3tbudcstudf9sbr3mqkbjtjsod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740718903480:android:caf23b336da178467bf44d",
+        "android_client_info": {
+          "package_name": "com.tripplleatcustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740718903480-47rlqb3tbudcstudf9sbr3mqkbjtjsod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6DttA8luJQbA_QlLpke1qfhOEQoxKfvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740718903480-47rlqb3tbudcstudf9sbr3mqkbjtjsod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
