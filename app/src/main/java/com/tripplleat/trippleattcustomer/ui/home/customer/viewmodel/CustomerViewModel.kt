@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tripplleat.trippleattcustomer.modal.*
 import com.tripplleat.trippleattcustomer.repo.CustomerRepo
+import com.tripplleat.trippleattcustomer.ui.home.customer.modal.OrderDetails
 import com.tripplleat.trippleattcustomer.ui.home.customer.modal.ProductDetails
 import com.tripplleat.trippleattcustomer.ui.home.customer.modal.StoreDetails
 import kotlinx.coroutines.launch
@@ -30,6 +31,11 @@ class CustomerViewModel(private val repo : CustomerRepo, private val application
     var currentVariant = HashMap<Int,ProductDetails>()
     var currentCartList = ArrayList<ProductDetails>()
 
+    //myorder
+    var currentVariant1 = HashMap<Int,OrderDetails>()
+    var orderCartList = ArrayList<OrderDetails>()
+    var _Orders = MutableLiveData<ArrayList<OrderDetails>>()
+
     //Cart Fragment Variable
     var isListLoaded  = false
     var isChangesDone = MutableLiveData<Int>()
@@ -39,6 +45,9 @@ class CustomerViewModel(private val repo : CustomerRepo, private val application
         currentVariant.put(-1,ProductDetails("fake","fake","fake",-1,-1,-1,-1,"fake",0,"fake","fake","fake","fake","fake"))
         repo.fetchProductsInCart(_ProductsInCart,currentCartList)
         repo.fetchAllStores(storesList)
+
+        currentVariant1.put(-1, OrderDetails(-1,"fake"))
+        repo.myOrders(_Orders,orderCartList)
     }
 
     //function to fetch product from sellers

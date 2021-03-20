@@ -7,6 +7,7 @@ import com.google.android.gms.tasks.OnFailureListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.tripplleat.trippleattcustomer.modal.*
+import com.tripplleat.trippleattcustomer.ui.home.customer.modal.OrderDetails
 import com.tripplleat.trippleattcustomer.ui.home.customer.modal.ProductDetails
 import com.tripplleat.trippleattcustomer.ui.home.customer.modal.StoreDetails
 import kotlinx.coroutines.Dispatchers
@@ -248,5 +249,29 @@ class CustomerRepo {
             }
         }
     }
+
+    fun myOrders(_Orders: MutableLiveData<ArrayList<OrderDetails>>,orderCartList : ArrayList<OrderDetails>) {
+        val list = ArrayList<OrderDetails>()
+        GlobalScope.launch(Dispatchers.IO) {
+            firestore.collection("Order Details/${Fuser?.uid}/").addSnapshotListener { snapshot, error ->
+                if(error != null){
+                    Log.i("listener", "Listen Failed ${error.message}")
+                    return@addSnapshotListener
+                }
+                if(snapshot != null){
+                    orderCartList.clear()
+                    list.clear()
+                    val docs = snapshot.documents
+                    docs.forEach {
+                        val product = it.toObject(OrderDetails::class.java)
+                        list.add(product!!)
+                    }
+                    orderCartList.addAll(list)
+                    _Orders.value = list
+                }
+            }
+        }
+    }
+
 
 }
