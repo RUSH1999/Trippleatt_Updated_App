@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RelativeLayout
-                android:background="@android:color/holo_blue_dark"
+                android:background="#4AACF8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
@@ -43,19 +43,20 @@
                             android:textColor="@android:color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="25sp"
-                            android:id="@+id/name"/>
+                            android:textSize="20sp"
+                            android:id="@+id/name"
+                            android:textStyle="bold"/>
                         <TextView
                             android:textColor="@android:color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="25sp"
+                            android:textSize="20sp"
                             android:id="@+id/mobile"/>
                         <TextView
                             android:textColor="@android:color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="25sp"
+                            android:textSize="20sp"
                             android:id="@+id/email"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -87,7 +88,7 @@
                             android:layout_height="wrap_content"
                             android:text="Rating"
                             android:textStyle="bold"
-                            android:textSize="25sp"
+                            android:textSize="22sp"
                             />
                     </LinearLayout>
                     <LinearLayout
@@ -111,7 +112,7 @@
                             android:layout_height="wrap_content"
                             android:text="Contribution"
                             android:textStyle="bold"
-                            android:textSize="25sp"
+                            android:textSize="22sp"
                             />
                     </LinearLayout>
                     <LinearLayout
@@ -135,7 +136,7 @@
                             android:layout_height="wrap_content"
                             android:text="Suggestion"
                             android:textStyle="bold"
-                            android:textSize="25sp"
+                            android:textSize="22sp"
                             />
                     </LinearLayout>
 
@@ -159,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:text="My Address"
                     android:textStyle="bold"
-                    android:textSize="26sp"
+                    android:textSize="20sp"
                     android:textColor="@android:color/holo_blue_dark"/>
                 <TextView
                     android:padding="15dp"
@@ -190,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:text="Saved Cards"
                     android:textStyle="bold"
-                    android:textSize="26sp"
+                    android:textSize="20sp"
                     android:textColor="@android:color/holo_blue_dark"/>
                 <TextView
                     android:padding="15dp"
@@ -208,6 +209,7 @@
                     android:background="@color/colorPrimary"
                     android:textColor="@android:color/white"
                     android:text="Add new"
+                    android:textStyle="bold"
                     />
 
             </LinearLayout>

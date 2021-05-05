@@ -16,6 +16,10 @@
         <action
             android:id="@+id/action_home_fragment_to_pp"
             app:destination="@id/pp" />
+        <action
+            android:id="@+id/action_home_fragment_to_order1"
+            app:destination="@+id/order1"
+            />
     </fragment>
     <fragment
         android:id="@+id/storeProductsFragment"
@@ -28,9 +32,21 @@
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.tripplleat.trippleattcustomer.ui.home.customer.fragments.CartFragment"
-        android:label="CartFragment" />
+        android:label="CartFragment" >
+        <action
+            android:id="@+id/action_cartFragment_to_po"
+            app:destination="@id/po" />
+    </fragment>
     <fragment
         android:id="@+id/pp"
         android:name="com.tripplleat.trippleattcustomer.ui.home.customer.activity.profileFragment"
         android:label="CartFragment" />
+    <fragment
+        android:id="@+id/po"
+        android:name="com.tripplleat.trippleattcustomer.place_order"
+        android:label="CartFragment" />
+    <fragment
+        android:id="@+id/order1"
+        android:name="com.tripplleat.trippleattcustomer.ui.home.customer.fragments.history"
+        android:label="OrderFragment" />
 </navigation>

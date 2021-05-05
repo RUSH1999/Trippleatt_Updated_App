@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:onClick="payment"
         android:text="Continue"/>
     </RelativeLayout>
     <include

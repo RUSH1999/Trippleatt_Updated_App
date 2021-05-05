@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/bottomSheet"
-    android:background="#3F51B5"
+    android:background="@drawable/borders"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,7 +9,10 @@
     app:behavior_hideable="true"
     app:behavior_peekHeight="0dp"
     app:behavior_skipCollapsed="false"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginBottom="50dp"
+    android:layout_margin="15dp"
+    android:elevation="25dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,16 +35,17 @@
                 android:layout_height="match_parent"
                 android:text="Quantity"
                 android:textColor="#000000"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/etProductQuantityBottomCustomer"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/white_background"
+                android:background="@drawable/button_design"
                 android:padding="3dp"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
@@ -106,28 +110,65 @@
                 android:textColor="@android:color/black"
                 android:textSize="19sp" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Price:"
+                    android:layout_marginStart="10dp"
+                    android:padding="3dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="19sp"/>
+                <TextView
+                    android:id="@+id/txtTotalpriceBottomcustomer"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Total price"
+                    android:layout_gravity="right"
+                    android:textSize="20sp"
+                    android:padding="3dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="#000000"
+                    android:background="@drawable/button_design"
+                    android:textStyle="bold"
+                    android:layout_margin="20dp"/>
+
+            </LinearLayout>
+
+
         </LinearLayout>
 
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/txtTotalpriceBottomcustomer"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Total price"
-        android:layout_gravity="right"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        android:background="@drawable/white_background"
-        android:textStyle="bold"
-        android:layout_margin="20dp"/>
-
-
     <Button
         android:id="@+id/btnAddProductBottomCustomer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_dark"
-        android:text="Add to cart"/>
+        android:background="@color/colorPrimaryDark"
+        android:text="Add to cart"
+        android:textSize="25dp"
+        android:layout_margin="3dp"
+        android:textColor="@color/white"/>
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"/>-->
+    <Button
+        android:id="@+id/btnBuyNowBottomCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Buy Now"
+        android:textSize="25dp"
+        android:layout_margin="3dp"
+        android:textColor="@color/white"/>
 </LinearLayout>

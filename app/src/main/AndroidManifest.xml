@@ -39,13 +39,19 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".MapsActivity2"
+            android:label="@string/title_activity_maps2"></activity>
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
             android:name=".ui.auth.customer.MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
-        <activity android:name=".ui.home.customer.activity.StoreProductsActivity" />
+            android:label="@string/title_activity_maps" />
+        <!--<activity android:name=".ui.home.customer.activity.StoreProductsActivity" />-->
         <activity android:name=".ui.home.customer.activity.Customer_Home" />
         <activity android:name=".ui.auth.driver.driverAuthActivity" />
         <activity android:name=".ui.auth.business.busi_AuthActivity" />
-        <activity android:name=".ui.auth.customer.AuthActivity">
+        <activity android:name=".ui.auth.customer.AuthActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

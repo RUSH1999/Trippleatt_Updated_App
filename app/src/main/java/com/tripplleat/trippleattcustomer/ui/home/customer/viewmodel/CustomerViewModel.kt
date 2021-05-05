@@ -30,11 +30,10 @@ class CustomerViewModel(private val repo : CustomerRepo, private val application
     var isProductAddedToCart = MutableLiveData<Int>()
     var currentVariant = HashMap<Int,ProductDetails>()
     var currentCartList = ArrayList<ProductDetails>()
+    var OrderedList=ArrayList<ProductDetails>()
 
     //myorder
-    var currentVariant1 = HashMap<Int,OrderDetails>()
-    var orderCartList = ArrayList<OrderDetails>()
-    var _Orders = MutableLiveData<ArrayList<OrderDetails>>()
+    var _ProductsInOrder=MutableLiveData<ArrayList<ProductDetails>>()
 
     //Cart Fragment Variable
     var isListLoaded  = false
@@ -46,8 +45,14 @@ class CustomerViewModel(private val repo : CustomerRepo, private val application
         repo.fetchProductsInCart(_ProductsInCart,currentCartList)
         repo.fetchAllStores(storesList)
 
-        currentVariant1.put(-1, OrderDetails(-1,"fake"))
-        repo.myOrders(_Orders,orderCartList)
+        repo.fetchProductsInOrder(_ProductsInOrder,currentCartList)
+
+       // currentVariant1.put(-1,OrderDetails("fake","fake","fake",-1,-1,-1,-1,"fake",0,"fake","fake","fake","fake","fake"))
+
+
+
+        //currentVariant1.put(-1, OrderDetails(-1,"fake"))
+        //repo.addProductTomyOrders(_Orders,orderCartList)
     }
 
     //function to fetch product from sellers
@@ -71,6 +76,13 @@ class CustomerViewModel(private val repo : CustomerRepo, private val application
         product.sellerId = currentStore?.id!!
         product.shopName = currentStore?.shopName!!
         repo.addProductTocart(product,isProductAddedToCart)
+    }
+
+    fun addProductTomyOrders(product:ProductDetails){
+        product.sellerId=currentStore?.id!!
+        product.shopName=currentStore?.shopName!!
+        repo.addProductTomyOrders(product,isProductAddedToCart)
+
     }
 
     //function to remove product from cart

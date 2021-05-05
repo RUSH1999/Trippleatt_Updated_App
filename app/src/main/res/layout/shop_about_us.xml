@@ -41,86 +41,265 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:padding="3dp"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:textAlignment="center"
-                android:layout_width="wrap_content"
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="21sp"
-                android:text="4.0(21)"
-                android:drawableStart="@drawable/star"
-                android:textStyle="bold"
-                android:background="@drawable/button_login"
-                android:textColor="@android:color/white"/>
-            <!-- Store type eg.grocery,hardware,vegetables,chemist-->
-            <androidx.recyclerview.widget.RecyclerView
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:padding="2dp"/>
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+
+                    android:padding="2dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp">
+                    <ImageView
+                        android:id="@+id/addimage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/addimage"
+                        android:layout_gravity="center"
+                        android:padding="2dp"/>
+                    <TextView
+                        android:textAlignment="center"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:text="Add Photos+"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D5D4D4"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/shoplocation"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/phone"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:textAlignment="viewStart"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Location"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D5D4D4"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/veriation"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/four_squre"
+                    android:layout_gravity="center"/>
+
+                <!-- Store type eg.grocery,hardware,vegetables,chemist-->
+                <androidx.recyclerview.widget.RecyclerView
                 android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D5D4D4"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/contact"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/phone"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="9091123456"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D5D4D4"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/website"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/website"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="www.abcd.com"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D5D4D4"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/gmail"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/mail"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="vsm@gmail.com"
+                    android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D5D4D4"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/facebook"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Add a facebook page"
+                    android:textColor="#A19F9F"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D5D4D4"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/claim_shop"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/shield"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:textAlignment="viewStart"
+                    android:layout_marginLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="Claim This Shop"
+                    android:textColor="#3498DB"/>
+
+            </LinearLayout>
+
             <View
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
-            <TextView
-                android:textAlignment="center"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="23sp"
-                android:text="Contact Information"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"/>
-            <TextView
-                android:textAlignment="viewStart"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="17sp"
-                android:text="Email:"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"/>
-            <TextView
-                android:textAlignment="viewStart"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="17sp"
-                android:text="Address:"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"/>
-            <TextView
-                android:textAlignment="viewStart"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="17sp"
-                android:text="Phone Numbers"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"/>
-            <TextView
-                android:textAlignment="viewStart"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="17sp"
-                android:text="Website:"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"/>
-            <View
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
+                android:background="#D5D4D4"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>

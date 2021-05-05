@@ -154,13 +154,15 @@
             android:text="@string/resend_code"
             android:textSize="21sp"
             android:textStyle="bold"
-android:textColor="@color/grey"
+            android:textColor="#444545"
             />
+
         <Button
             android:fontFamily="@font/verdana"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/button_login"
+            android:backgroundTint="#0B0B0B"
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
@@ -184,6 +186,18 @@ android:textColor="@color/grey"
             android:textColor="@color/colorPrimaryDark"
             />
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/verdana"
+            android:onClick="@{viewmodel.gotoDriverlogin}"
+            android:text="Deliver With Us"
+            android:textAlignment="center"
+            android:textColor="#393939"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

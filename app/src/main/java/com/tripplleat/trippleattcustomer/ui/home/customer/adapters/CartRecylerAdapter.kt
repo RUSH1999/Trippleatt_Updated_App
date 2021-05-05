@@ -59,6 +59,7 @@ class CartRecylerAdapter(
                 bottomSheet.state = BottomSheetBehavior.STATE_COLLAPSED
 
         }
+
         /*
         * This is a bottom sheet callback which will work when the state of bottom sheet change,
         * that is when the user click on the quantity because that is the only field which can be changed by the user and
@@ -80,10 +81,12 @@ class CartRecylerAdapter(
                         bottomSheet.findViewById(R.id.txtProductPriceBottomCustomer)
                     val image: ImageView = bottomSheet.findViewById(R.id.imgProductBottomCustomer)
                     val btn: Button = bottomSheet.findViewById(R.id.btnAddProductBottomCustomer)
+                    val bn:Button=bottomSheet.findViewById(R.id.btnBuyNowBottomCustomer)
                     val etQuantity: EditText =
                         bottomSheet.findViewById(R.id.etProductQuantityBottomCustomer)
                     val txtTotalPrice: TextView =
                         bottomSheet.findViewById(R.id.txtTotalpriceBottomcustomer)
+                    //val txtBuyNow:TextView=bottomSheet.findViewById(R.id.txtBuyNow)
 
                     txtProductName.text = product.productName
                     txtVariantName.text = product.variantName
@@ -137,6 +140,65 @@ class CartRecylerAdapter(
                             context.toast("please enter valid quantity then add to cart")
                         }
                     }
+
+                    bn.setOnClickListener{
+                        if (!etQuantity.text.isNullOrEmpty() && etQuantity.text.toString()
+                                .toInt() != 0 && etQuantity.text.toString()
+                                .toInt() <= product!!.existedQunatity
+                        ) {
+                            var flag = 0
+                            product.orderedQuantity = etQuantity.text.toString().toInt()
+                            product.totalPrice = txtTotalPrice.text.toString().toInt()
+                            if (!product.variantName.equals("none")) {
+                                for (i in 0 until (cartList?.size ?: 0)) {
+                                    val pDetails = cartList?.get(i)
+                                    if (pDetails!!.productName.equals(product.productName) && pDetails.variantName.equals(
+                                            product.variantName
+                                        )
+                                    ) {
+                                        flag = -1
+                                    }
+                                    else if(product.orderedQuantity > product.existedQunatity){
+                                        flag = -2
+                                    }
+                                }
+                            } else {
+                                for (i in 0 until (cartList?.size ?: 0)) {
+                                    val pDetails = cartList?.get(i)
+                                    if (pDetails!!.productName.equals(product.productName)) {
+                                        flag = -1
+                                    }
+                                    else if(product.orderedQuantity > product.existedQunatity){
+                                        flag = -2
+                                    }
+                                }
+                            }
+
+                            if (flag == 0) {
+                                cartList?.add(product)
+                                Log.i("cart_product", "$cartList")
+                                //viewModel.addProductTocart(product)
+                                viewModel.addProductTomyOrders(product)
+                                productAdded()
+                                etQuantity.setText("1")
+                            } else if(flag == -1) {
+                                cartList?.add(product)
+                                viewModel.addProductTomyOrders(product)
+
+                                //context.toast("This variant already exist in your cart")
+                                productAdded()
+                                etQuantity.setText("1")
+                            }
+                            else if(flag == -2){
+                                context.toast("Exceeding the max quantity")
+                                product.orderedQuantity = product.existedQunatity
+                            }
+                        } else {
+                            context.toast("Exceeding the max quantity you can buy only ${product.existedQunatity} products")
+                            etQuantity.setText(product.existedQunatity.toString())
+                        }
+                    }
+
                 }
             }
 
@@ -158,5 +220,6 @@ class CartRecylerAdapter(
         val txtQuantity: TextView = view.findViewById(R.id.txtProductQuantityCart)
         val txtSave: TextView = view.findViewById(R.id.txtSaveForLater)
         val txtRemove: TextView = view.findViewById(R.id.txtProductRemoveCart)
+        //val txtBuyNow:TextView=view.findViewById(R.id.txtBuyNow)
     }
 }

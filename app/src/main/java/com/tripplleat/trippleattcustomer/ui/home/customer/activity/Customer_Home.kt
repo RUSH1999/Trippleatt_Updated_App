@@ -11,6 +11,7 @@ import android.view.MenuItem
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
@@ -34,9 +35,10 @@ class Customer_Home : AppCompatActivity(), NavigationView.OnNavigationItemSelect
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customer__home)
-
         pref=getSharedPreferences("TP", Context.MODE_PRIVATE)
 
+
+/*
         imgCart = findViewById(R.id.imgCart)
         imgCart.setOnClickListener {
             findNavController(R.id.customerActivitynavHostFragment).navigate(R.id.cartFragment)
@@ -53,6 +55,7 @@ class Customer_Home : AppCompatActivity(), NavigationView.OnNavigationItemSelect
             R.string.navigation_drawer_close
         )
         toggle!!.syncState()
+        */
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -99,6 +102,10 @@ class Customer_Home : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
             R.id.profile -> {
                 findNavController(R.id.customerActivitynavHostFragment).navigate(R.id.pp)
+            }
+
+            R.id.order ->{
+                findNavController(R.id.customerActivitynavHostFragment).navigate(R.id.order1)
             }
 
         }

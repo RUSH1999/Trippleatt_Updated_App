@@ -165,6 +165,23 @@ class CustomerRepo {
                 }
             }
 
+
+    fun addProductTomyOrders(product:ProductDetails,isProductAddedToCart:MutableLiveData<Int>) {
+        GlobalScope.launch(Dispatchers.IO) {
+
+            val id=firestore.collection("Order Details/${Fuser?.uid}/order").document().id
+            product.productId = id
+            product.customerId = Fuser?.uid!!
+            firestore.collection("Order Details/${Fuser?.uid}/order").document(id).set(product).addOnSuccessListener {
+                isProductAddedToCart.value=1
+            }.addOnFailureListener {
+                isProductAddedToCart.value = -1
+            }
+        }
+    }
+
+
+
     //function to fetch products present inside the cart
     fun fetchProductsInCart(_ProductsInCart: MutableLiveData<ArrayList<ProductDetails>>,currentCartList : ArrayList<ProductDetails>) {
         val list = ArrayList<ProductDetails>()
@@ -184,6 +201,29 @@ class CustomerRepo {
                     }
                     currentCartList.addAll(list)
                     _ProductsInCart.value = list
+                }
+            }
+        }
+    }
+
+    fun fetchProductsInOrder(_ProductInOrder: MutableLiveData<ArrayList<ProductDetails>>,currentCartList : ArrayList<ProductDetails>){
+        var list=ArrayList<ProductDetails>()
+        GlobalScope.launch(Dispatchers.IO){
+            firestore.collection("Order Details/${Fuser?.uid}/order").addSnapshotListener{ snapshot,error ->
+                if(error !=null){
+                    Log.i("listener", "Listen Failed ${error.message}")
+                    return@addSnapshotListener
+                }
+                if(snapshot != null){
+                    currentCartList.clear()
+                    list.clear()
+                    val docs=snapshot.documents
+                    docs.forEach{
+                        val product = it.toObject(ProductDetails::class.java)
+                        list.add(product!!)
+                    }
+                    currentCartList.addAll(list)
+                    _ProductInOrder.value=list
                 }
             }
         }
@@ -245,29 +285,6 @@ class CustomerRepo {
                             }
                         }
                     }
-                }
-            }
-        }
-    }
-
-    fun myOrders(_Orders: MutableLiveData<ArrayList<OrderDetails>>,orderCartList : ArrayList<OrderDetails>) {
-        val list = ArrayList<OrderDetails>()
-        GlobalScope.launch(Dispatchers.IO) {
-            firestore.collection("Order Details/${Fuser?.uid}/").addSnapshotListener { snapshot, error ->
-                if(error != null){
-                    Log.i("listener", "Listen Failed ${error.message}")
-                    return@addSnapshotListener
-                }
-                if(snapshot != null){
-                    orderCartList.clear()
-                    list.clear()
-                    val docs = snapshot.documents
-                    docs.forEach {
-                        val product = it.toObject(OrderDetails::class.java)
-                        list.add(product!!)
-                    }
-                    orderCartList.addAll(list)
-                    _Orders.value = list
                 }
             }
         }

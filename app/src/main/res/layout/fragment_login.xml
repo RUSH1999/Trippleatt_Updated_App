@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -9,72 +9,118 @@
             type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
     </data>
 
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#F8F7F7">
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
             android:orientation="vertical"
+            android:padding="20dp"
             tools:context=".ui.auth.customer.LoginFragment">
-            <LinearLayout
-                android:layout_marginTop="250dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        app:srcCompat="@drawable/trippleatt_logo"
+                        android:layout_marginTop="40dp"/>
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="LOGIN"
+                        android:textAlignment="center"
+                        android:textColor="#2B2A2A"
+                        android:textSize="35dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
                 <EditText
-                    android:layout_marginStart="15dp"
-                    android:background="@drawable/stroke_otp"
-                    android:layout_width="0dp"
+                    android:layout_width="10dp"
                     android:layout_height="50dp"
-                    android:text="+91"
-                    android:inputType="none"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="0.20"
+                    android:backgroundTint="#2B2A2A"
                     android:enabled="false"
-                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/verdana"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:text="+91"
+                    android:textAlignment="center"
+                    android:textColor="#2B2A2A"
                     android:textSize="25sp"
                     android:textStyle="bold"
-                    android:maxLines="1"
-                    android:textAlignment="center"
-                    android:layout_weight="0.25"
-                    android:fontFamily="@font/verdana"
                     />
                 <EditText
-                    android:text="@={viewmodel.phonenumber}"
                     android:id="@+id/phone_number"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:background="@drawable/stroke_otp"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
-                    android:maxLines="1"
-                    android:inputType="number"
-                    android:fontFamily="@font/verdana"
-                    android:textColor="@android:color/black"
-                    android:textSize="25sp"
-                    android:paddingStart="15dp"
-                    android:hint="@string/phone_number"
-                    android:paddingEnd="15dp"
-                    android:maxLength="10"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_weight="0.8"
+                    android:backgroundTint="#2B2A2A"
+                    android:fontFamily="@font/verdana"
+                    android:hint="@string/phone_number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@={viewmodel.phonenumber}"
+                    android:textColor="#2B2A2A"
+                    android:textColorHint="#2B2A2A"
+                    android:textSize="25sp"
                     />
-            </LinearLayout>
+                </LinearLayout>
             <Button
-                android:fontFamily="@font/verdana"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/button_login"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="15dp"
+                android:background="@drawable/button_login"
+                android:backgroundTint="#0B0B0B"
+                android:fontFamily="@font/verdana"
                 android:text="@string/send_otp"
-                android:textSize="21sp"
-                android:onClick="@{viewmodel.sendVerifiactionCode}"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textColor="@android:color/white"
+                android:textSize="21sp"
+                android:onClick="@{viewmodel.sendVerifiactionCode}"
                 android:textStyle="bold"
                 />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50px"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="30dp"
+                android:text="OR"
+                android:textColor="#2B2A2A"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
@@ -82,55 +128,61 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="end">
+                >
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Are you a "
-                    android:textSize="21sp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:text="ARE YOU A"
+                    android:textColor="#2B2A2A"
+                    android:textSize="25sp"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
                     />
                 <TextView
                     android:onClick="@{viewmodel.gotoBusilogin}"
-                    android:fontFamily="@font/verdana"
                     android:id="@+id/underline_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/buisness"
-                    android:textSize="21sp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/verdana"
+                    android:text=" BUSINESS"
+                    android:textColor="#38AE38"
+                    android:textSize="25sp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorPrimaryDark"
                     />
                 <TextView
-                    android:fontFamily="@font/verdana"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/verdana"
                     android:text=" ?"
-                    android:textSize="21sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black" />
+                    android:textColor="#2B2A2A"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
 
 
             </LinearLayout>
             <LinearLayout
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="200dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="end">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F6F6F6"
+                android:orientation="vertical"
+                >
                 <TextView
-                    android:onClick="@{viewmodel.gotoDriverlogin}"
-                    android:fontFamily="@font/verdana"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/delivertext"
-                    android:textSize="21sp"
+                    android:onClick="@{viewmodel.gotoDriverlogin}"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/verdana"
+                    android:textAlignment="center"
+                    android:textColor="#393939"
+                    android:textSize="25dp"
                     android:textStyle="bold"
-                    android:textColor="@color/colorPrimaryDark"
+                    tools:ignore="RtlCompat"
                     />
 
 
@@ -141,4 +193,5 @@
 
     </androidx.core.widget.NestedScrollView>
 
+    </RelativeLayout>
 </layout>

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:elevation="5dp"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
     >
 
     <LinearLayout
-        android:background="@drawable/cardview_back"
+        android:background="@drawable/borders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -21,8 +23,8 @@
                 android:paddingTop="3dp"
                 android:paddingStart="30dp"
                 android:paddingEnd="20dp"
-                android:layout_width="250dp"
-                android:layout_height="40dp"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
                 android:textSize="21sp"
                 android:background="@drawable/shop_status_back"
                 android:text="Currently open"
@@ -41,9 +43,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:textSize="27sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"/>
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/star_shop"/>
             <TextView
                 android:id="@+id/txtStoreRating"
                 android:paddingStart="10dp"
@@ -51,7 +59,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
-                android:textSize="23sp"
+                android:textSize="19sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
                 android:drawableStart="@drawable/star"
@@ -71,9 +79,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:textSize="27sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/darker_gray"/>
+            <ImageView
+                android:id="@+id/directon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/distance_icon"/>
             <TextView
                 android:id="@+id/txtDistance"
                 android:paddingStart="10dp"
@@ -81,10 +95,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
-                android:textSize="23sp"
+                android:textSize="19sp"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:drawableStart="@drawable/distance_icon" />
+                android:textColor="@android:color/black" />
         </LinearLayout>
 
     </LinearLayout>

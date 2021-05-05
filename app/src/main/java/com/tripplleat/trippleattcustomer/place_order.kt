@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.findNavController
 
 class place_order : Fragment() {
 
@@ -20,6 +22,8 @@ class place_order : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.place_order_fragment, container, false)
+
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -27,5 +31,6 @@ class place_order : Fragment() {
         viewModel = ViewModelProvider(this).get(PlaceOrderViewModel::class.java)
         // TODO: Use the ViewModel
     }
+
 
 }

@@ -1,18 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-<data>
-    <variable
-        name="viewmodel"
-        type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
-</data>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
+    </data>
+
     <RelativeLayout
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.auth.driver.driverSignUp"
-        android:id="@+id/rootcontainer">
+        android:layout_height="match_parent">
 
 
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingClass">
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F6F6F6"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="90dp"
+                app:srcCompat="@drawable/delivery_boy" />
+
+            <EditText
+                android:id="@+id/firstname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/button_login"
+                android:backgroundTint="#E6E6E8"
+                android:hint="First Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@{viewmodel.firstname}"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textColorHint="#424141"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/lastname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/button_login"
+                android:backgroundTint="#E6E6E8"
+                android:hint="Last Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@={viewmodel.lastname}"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textColorHint="#424141"
+                android:textSize="25sp" />
+
+
+            <Button
+                android:id="@+id/setuploc"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/button_login"
+                android:backgroundTint="#2ECC71"
+                android:fontFamily="@font/verdana"
+                android:maxLines="1"
+                android:onClick="@{viewmodel.registerUser}"
+                android:paddingStart="35dp"
+                android:paddingEnd="15dp"
+                android:text="Continue"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </RelativeLayout>
 </layout>

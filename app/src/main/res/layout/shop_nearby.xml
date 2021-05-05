@@ -17,7 +17,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:textSize="27sp"
+            android:textSize="25sp"
             android:text="Delever to"
             android:textStyle="bold"
             android:textColor="@android:color/black"/>
@@ -27,7 +27,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.2"
-            android:textSize="21sp"
+            android:textSize="15sp"
             android:text="Home"
             android:textStyle="bold"
             android:background="@drawable/black_round_corner"
@@ -40,7 +40,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.2"
-            android:textSize="21sp"
+            android:textSize="15sp"
             android:text="Office"
             android:textStyle="bold"
             android:textColor="@android:color/black"/>
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:textSize="16sp"
-            android:text="popular"
+            android:text="Popular"
             android:textStyle="bold"
             android:background="@drawable/black_round_corner"
             android:textColor="@android:color/white"/>

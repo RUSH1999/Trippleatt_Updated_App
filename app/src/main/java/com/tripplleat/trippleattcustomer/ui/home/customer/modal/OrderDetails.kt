@@ -5,7 +5,7 @@ package com.tripplleat.trippleattcustomer.ui.home.customer.modal
 * */
 
 data class OrderDetails(
-    /*var productName: String,
+    var productName: String,
     var variantName: String,
     var image: String,
     var mrp: Int,
@@ -18,9 +18,9 @@ data class OrderDetails(
     var sellerId : String,
     var productId : String,
     var shopName : String,
-    var variantId : String*/
-    var price:Int,
-    var payment_mode:String
+    var variantId : String
+
 ) {
-    constructor() : this(0,"")
+    constructor() : this("","","",0,0,0,0,"",0,"","","","","")
+
 }

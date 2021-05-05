@@ -33,4 +33,6 @@
         <item>Dry fruits</item>
         <item>Other</item>
     </string-array>
+    <string name="title_activity_maps2">Map</string>
+    <string name="tap_to_rate_review"><![CDATA[Tap ro Rate & Review]]></string>
 </resources>

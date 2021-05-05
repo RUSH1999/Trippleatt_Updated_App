@@ -1,17 +1,410 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:textAlignment="center"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="23sp"
-        android:text="Reviews"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textAlignment="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Reviews"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="15dp"
+                        android:paddingTop="35dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/tap_to_rate_review"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RatingBar
+                        android:id="@+id/listitemrating1"
+                        style="@android:attr/ratingBarStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:max="5"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7" />
+
+                    <TextView
+                        android:layout_marginRight="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_rounded"
+                        android:padding="10dp"
+                        android:text="Write Your Experience"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingTop="10dp"
+                    android:text="4.5"
+                    android:textColor="@android:color/black"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:id="@+id/listitemrating"
+                    style="@android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:isIndicator="true"
+                    android:max="5"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#A1A1A1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="5dp"
+                            android:paddingTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:text="5"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <ImageView
+                            android:id="@+id/ratings"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/star_shop" />
+
+                        <ProgressBar
+                            android:id="@+id/simpleProgressBar"
+                            android:layout_width="fill_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="wrap_content"
+                            android:scaleY="3"
+                            android:max="100"
+                            android:progress="15"
+                            android:layout_marginTop="15dp"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:text="4"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <ImageView
+                            android:id="@+id/ratings4"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/star_shop" />
+
+                        <ProgressBar
+                            android:id="@+id/simpleProgressBar4"
+                            android:layout_width="fill_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:scaleY="3"
+                            android:max="100"
+                            android:progress="80"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:text="3"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <ImageView
+                            android:id="@+id/ratings3"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/star_shop" />
+
+                        <ProgressBar
+                            android:id="@+id/simpleProgressBar3"
+                            android:layout_width="fill_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:scaleY="3"
+                            android:max="100"
+                            android:progress="30"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:text="2"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <ImageView
+                            android:id="@+id/ratings2"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/star_shop" />
+
+                        <ProgressBar
+                            android:id="@+id/simpleProgressBar2"
+                            android:layout_width="fill_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="wrap_content"
+                            android:scaleY="3"
+                            android:max="100"
+                            android:progress="60"
+                            android:layout_marginTop="5dp"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textAlignment="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:text="1"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <ImageView
+                            android:id="@+id/ratings1"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/star_shop" />
+
+                        <ProgressBar
+                            android:id="@+id/simpleProgressBar1"
+                            android:layout_width="fill_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:scaleY="3"
+                            android:max="100"
+                            android:progress="20"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="#000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textAlignment="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:text="5"
+                    android:textColor="#57D611"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/rated"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/star_shop" />
+            </LinearLayout>
+            <TextView
+                android:textAlignment="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="Good Product. As Well Good"
+                android:textColor="#C8C8C8"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="5"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:paddingStart="5dp"
+                    android:layout_weight="1"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="March"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/flag"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/flag" />
+                <TextView
+                    android:gravity="end"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Report"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>

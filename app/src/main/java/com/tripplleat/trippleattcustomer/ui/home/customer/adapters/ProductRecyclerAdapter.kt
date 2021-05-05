@@ -20,6 +20,7 @@ import com.tripplleat.trippleattcustomer.modal.VariantLoose
 import com.tripplleat.trippleattcustomer.modal.VariantSeller
 import com.tripplleat.trippleattcustomer.modal.VariantSellerLoose
 import com.tripplleat.trippleattcustomer.ui.home.customer.fragments.ProductsFragment
+import com.tripplleat.trippleattcustomer.ui.home.customer.modal.OrderDetails
 import com.tripplleat.trippleattcustomer.ui.home.customer.modal.ProductDetails
 import com.tripplleat.trippleattcustomer.ui.home.customer.viewmodel.CustomerViewModel
 import com.tripplleat.trippleattcustomer.util.toast
@@ -39,6 +40,7 @@ class ProductRecyclerAdapter(
     val mapOfLooseProduct: HashMap<String, ArrayList<VariantSellerLoose>>,//This is a map of variantseller which actually contain the stock and price of the Loose product
     val mapOfLooseVariant: HashMap<String, VariantLoose>,//This is a map of variant which actually contain loose variant details
     var currentProduct: HashMap<Int, ProductDetails>,//This is a map for current product which is useer seeing right now
+    //var currentProduct1: HashMap<Int, OrderDetails>,
     var cartList: ArrayList<ProductDetails>?, // This is a list of product which present inside the cart
     val bottomSheet: BottomSheetBehavior<LinearLayout>,
     val viewModel: CustomerViewModel
@@ -118,6 +120,7 @@ class ProductRecyclerAdapter(
                         bottomSheet.findViewById(R.id.txtProductPriceBottomCustomer)
                     val image: ImageView = bottomSheet.findViewById(R.id.imgProductBottomCustomer)
                     val btn: Button = bottomSheet.findViewById(R.id.btnAddProductBottomCustomer)
+                    val bn:Button=bottomSheet.findViewById(R.id.btnBuyNowBottomCustomer)
                     val etQuantity: EditText =
                         bottomSheet.findViewById(R.id.etProductQuantityBottomCustomer)
                     val txtTotalPrice: TextView =
@@ -189,6 +192,63 @@ class ProductRecyclerAdapter(
                         } else {
                             context.toast("Exceeding the max quantity you can buy only ${product.existedQunatity} products")
                            etQuantity.setText(product.existedQunatity.toString())
+                        }
+                    }
+                    bn.setOnClickListener {
+                        if (!etQuantity.text.isNullOrEmpty() && etQuantity.text.toString()
+                                .toInt() != 0 && etQuantity.text.toString()
+                                .toInt() <= product!!.existedQunatity
+                        ) {
+                            var flag = 0
+                            product.orderedQuantity = etQuantity.text.toString().toInt()
+                            product.totalPrice = txtTotalPrice.text.toString().toInt()
+                            if (!product.variantName.equals("none")) {
+                                for (i in 0 until (cartList?.size ?: 0)) {
+                                    val pDetails = cartList?.get(i)
+                                    if (pDetails!!.productName.equals(product.productName) && pDetails.variantName.equals(
+                                            product.variantName
+                                        )
+                                    ) {
+                                        flag = -1
+                                    }
+                                    else if(product.orderedQuantity > product.existedQunatity){
+                                        flag = -2
+                                    }
+                                }
+                            } else {
+                                for (i in 0 until (cartList?.size ?: 0)) {
+                                    val pDetails = cartList?.get(i)
+                                    if (pDetails!!.productName.equals(product.productName)) {
+                                        flag = -1
+                                    }
+                                    else if(product.orderedQuantity > product.existedQunatity){
+                                        flag = -2
+                                    }
+                                }
+                            }
+
+                            if (flag == 0) {
+                                cartList?.add(product)
+                                Log.i("cart_product", "$cartList")
+                                //viewModel.addProductTocart(product)
+                                viewModel.addProductTomyOrders(product)
+                                productAdded()
+                                etQuantity.setText("1")
+                            } else if(flag == -1) {
+                                cartList?.add(product)
+                                viewModel.addProductTomyOrders(product)
+
+                                //context.toast("This variant already exist in your cart")
+                                productAdded()
+                                etQuantity.setText("1")
+                            }
+                            else if(flag == -2){
+                                context.toast("Exceeding the max quantity")
+                                product.orderedQuantity = product.existedQunatity
+                            }
+                        } else {
+                            context.toast("Exceeding the max quantity you can buy only ${product.existedQunatity} products")
+                            etQuantity.setText(product.existedQunatity.toString())
                         }
                     }
 

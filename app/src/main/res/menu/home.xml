@@ -3,7 +3,7 @@
 <group>
     <item android:id="@+id/home" android:title="Home"/>
     <item android:id="@+id/cart" android:title="My Cart"/>
-    <item android:id="@+id/order" android:title="My Order"/>
+    <item android:id="@+id/order" android:title="Order History"/>
     <item android:id="@+id/wallet" android:title="My Wallet"/>
     <item android:id="@+id/profile" android:title="My Profile"/>
     <item android:id="@+id/fav" android:title="My Favourite"/>

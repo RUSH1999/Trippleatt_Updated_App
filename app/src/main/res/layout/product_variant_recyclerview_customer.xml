@@ -17,7 +17,7 @@
         android:text="variant name"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="21sp"
+        android:textSize="12sp"
         android:textStyle="bold" />
 
 </RelativeLayout>

@@ -161,6 +161,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/button_login"
+            android:backgroundTint="#2ECC71"
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
@@ -171,6 +172,8 @@
             android:textColor="@android:color/white"
             android:textStyle="bold"
             />
+
+
         <TextView
             android:id="@+id/countdown"
             android:layout_marginTop="150dp"
@@ -183,7 +186,6 @@
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             />
-
 
     </LinearLayout>
 
