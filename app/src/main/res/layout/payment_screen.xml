@@ -156,9 +156,10 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Online"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:layout_marginBottom="20dp"
             android:textStyle="bold"/>
+
 
         <TextView
             android:layout_width="match_parent"
